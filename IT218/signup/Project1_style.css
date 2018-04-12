@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main .h1{
+    text-align: center;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "left-addbar navbar"
+                         "left-addbar main-content" 
+                         "left-addbar main-content";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.SignupForm-h1{
+    text-align: center;
+    padding: 1rem;
+    font-size: 250%;
+}
+
+.navbar {
+    background: white;
+    grid-area: navbar;
+}
+.navbar img{
+    display: block;
+    background-size: cover;
+    margin-right: auto;
+    height: 25vh;
+    max-width: 100%;
+    box-sizing: border-box;
+
+}
+
+.left-addbar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left-addbar a {
+    padding: 6px 0 6px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+}
+
+.left-addbar a:hover {
+    color: #f1f1f1;
+}
+
+.right-addbar {
+    grid-area: right-addbar;
+}
+
+.main-content {
+    grid-area: main-content;
+    padding-right: 10%;
+}
+
+.footer {
+    background: steelblue;
+    grid-area: footer;
+}
+
+.SignupForm form {
+    background: #d9dce0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.SignupForm label{
+    display: block;
+    padding-left: 1em;
+    padding-top: 1.5%;
+    font-size: 120%;
+}
+
+.SignupForm input,
+date,
+select {
+    width: 80%;
+    padding: 1em;
+    box-sizing: border-box;
+    margin: 1.5%;
+    border: 1px solid #b2b2b2;
+    border-radius: 4px;
+    font: #b2b2b2;
+    line-height: 1rem;
+}
+
+input[type=text]:focus {
+    border: 1px solid #555;
+    background-color: #dbf6ff;
+}
+
+input[type=password]:focus {
+    border: 1px solid #555;
+    background-color: #dbf6ff;
+}
+
+input[type=email]:focus {
+    border: 1px solid #555;
+    background-color: #dbf6ff;
+}
+
+input[type=date]:focus {
+    border: 1px solid #555;
+    background-color: #dbf6ff;
+}
+
+input[type=tel]:focus {
+    border: 1px solid #555;
+    background-color: #dbf6ff;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: skyblue;
+    color: white;
+    cursor: pointer;
+    font-size: 150%;
+}
+
+.SignupForm select{
+    border: 1px solid #555;
+}
+
+.SignupForm select:focus{
+background-color: #dbf6ff;
+}
+
+/* Media */
+
+@media (max-width: 500px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "navbar"
+                             "left-addbar"
+                             "main-content"
+                             "footer";
+
+    }
+}
